@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  height: 100vh;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .header {
+  font-size: 4em;
+  background: linear-gradient(to right, #f1c40f, #f39c12, #d35400, #c0392b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container a {
+  padding: 30px 50px;
+  margin: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.btn-container a .btn {
+  display: block;
+  padding: 20px 100px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: transform 0.1s ease;
+}
+
+section .btn-container .color-01 {
+  background: linear-gradient(to right, #3498db, #9b59b6);
+}
+
+section .btn-container .color-02 {
+  background: linear-gradient(to right, #e67e22, #e74c3c);
+}
+
+section .btn-container .color-03 {
+  background: linear-gradient(to right, #1abc9c, #bdc3c7);
+}
