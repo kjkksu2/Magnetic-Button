@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Magnetic Buttons</title>
+  </head>
+  <body>
+    <section>
+      <h1 class="header">Magnetic Buttons</h1>
+      <div class="btn-container">
+        <a href="#">
+          <span class="btn color-01">mag 1</span>
+        </a>
+        <a href="#">
+          <span class="btn color-02">mag 2</span>
+        </a>
+        <a href="#">
+          <span class="btn color-03">mag 3</span>
+        </a>
+      </div>
+    </section>
+  </body>
+  <script>
+    const btns = document.querySelectorAll("a");
+
+    btns.forEach((btn) => {
+      btn.addEventListener("mousemove", (event) => {
+        const btnInfo = btn.getBoundingClientRect();
+        const x = event.pageX - btnInfo.left - btnInfo.width * 0.5;
+        const y = event.pageY - btnInfo.top - btnInfo.height * 0.5;
+
+        btn.children[0].style.transform =
+          "translate(" + x * 0.3 + "px," + y * 0.6 + "px)";
+      });
+
+      btn.addEventListener("mouseleave", (event) => {
+        btn.children[0].style.transform = "translate(0, 0)";
+      });
+    });
+  </script>
+</html>
